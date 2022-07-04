@@ -1,0 +1,37 @@
+.mainContent{
+    margin-top: 60px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.portofolio {
+    background-color: #50777a;
+    padding: 20px 5px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 30px;
+    background-color: #50777a;
+    border-radius: 15px;
+    padding: 20px 5px;
+}
+
+.about {
+    text-align: center;
+    margin-top: 30px;
+    background-color: #50777a;
+    border-radius: 15px;
+    padding: 20px 5px;
+}

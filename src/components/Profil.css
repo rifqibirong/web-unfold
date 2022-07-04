@@ -1,0 +1,16 @@
+.avatar img {
+    width: 50%;
+    height: 150px;
+    border-radius: 40%;
+    margin: auto;
+    position: absolute;
+    top: 12.5vh;
+    left: 0;
+    right: 0;
+}
+
+.nama h2 {
+    text-align: center;
+    color: #D7DBDD;
+    margin-top: 100px;
+}
