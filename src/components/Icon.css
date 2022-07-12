@@ -7,16 +7,22 @@
 }
 
 .icon {
-    font-size: 20px;
-    color: #D7DBDD;
+    font-size: 25px;
+    color: #ffff;
+    display: flex;
+    gap: 20px;
 }
 
-.icon .ig {
-    margin-right: 20px;
+.icon .icon-bg {
+    width: 50px;
+    height: 50px;
+    background-color: #50777a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
-.icon .fb {
-    margin-right: 20px;
-}
-.icon .mail {
-    margin-right: 20px;
+
+.icon-bg a {
+    text-decoration: none;
 }

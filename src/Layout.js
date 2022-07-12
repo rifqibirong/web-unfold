@@ -3,7 +3,7 @@ import "./Layout.css";
 import Header from "./components/Header";
 import Profil from "./components/Profil";
 import Icon from "./components/Icon";
-import Content from "./components/Content";
+// import Content from "./components/Content";
 import Footer from "./components/Footer";
 
 function Layout() {
@@ -12,7 +12,7 @@ function Layout() {
       <Header />
       <Profil />
       <Icon />
-      <Content />
+      {/* <Content /> */}
       <Footer />
     </body>
   );
