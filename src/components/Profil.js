@@ -10,8 +10,8 @@ function Profil() {
         <img src={Ava} alt="" />
       </div>
       <div className="nama">
-        <h4>Hi There! </h4>
-        <h3>I'm BIRONGCODE</h3>
+        <h3>Hi There!</h3>
+        <h2>I'm BIRONGCODE</h2>
       </div>
     </div>
   );

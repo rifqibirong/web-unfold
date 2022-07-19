@@ -10,18 +10,16 @@ function Icon() {
     <div className="mainIcon">
       <div className="icon">
         <div className="icon-bg">
-          <FaGithub className="git" />
+          <a href="https://github.com/rifqibirong"><FaGithub className="git" /></a>
         </div>
         <div className="icon-bg">
-          <FaFacebookF className="fb" />
+          <a href="https://facebook.com/rifqi.ramadhansyach.9/"><FaFacebookF className="fb" /></a>
         </div>
         <div className="icon-bg">
-          <FiMail className="mail" />
+          <a href="mailto: rifqi.ramadhansyach18@gmail.com"><FiMail className="mail" /></a>
         </div>
         <div className="icon-bg">
-          <a href="https://www.linkedin.com/in/rifqi-ramadhansyach-323b13244">
-            <BsLinkedin className="linkedin" />
-          </a>
+          <a href="https://www.linkedin.com/in/rifqi-ramadhansyach-323b13244"><BsLinkedin className="linkedin" /></a>
         </div>
       </div>
     </div>

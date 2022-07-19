@@ -1,6 +1,6 @@
 .mainContent{
     margin-top: 60px;
-    width: 90%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
     font-size: 20px;
@@ -9,7 +9,8 @@
 
 .link {
     text-decoration: none;
-    color: black;
+    color: #fff;
+    font-weight: bold;
 }
 
 .portofolio {
@@ -28,10 +29,18 @@
     padding: 20px 5px;
 }
 
+.contact:hover {
+    background-color: #486b6d;
+}
+
 .about {
     text-align: center;
     margin-top: 30px;
     background-color: #50777a;
     border-radius: 15px;
     padding: 20px 5px;
+}
+
+.about:hover {
+    background-color: #486b6d;
 }
