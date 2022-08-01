@@ -8,13 +8,13 @@ import Footer from "./components/Footer";
 
 function Layout() {
   return (
-    <body>
+    <>
       <Header />
       <Profil />
       <Icon />
       <Content />
       <Footer />
-    </body>
+    </>
   );
 }
 
