@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Contact.css";
 
 // const Contact = () => {
 //   const [name, setName] = useState("dama");
@@ -31,7 +32,7 @@ const Bike = () => {
 
   return (
     <div>
-      <h3>
+      <h3 className={motor.color === "white" && "supra"}>
         it is {motor.brand} its color a {motor.color}
       </h3>
       <button onClick={changeModel}> Click </button>
