@@ -18,6 +18,13 @@ import "./Contact.css";
 // };
 
 const Bike = () => {
+  // const [count, setCount] = useState(0);
+  const [color, setColor] = useState(true);
+
+  const handleClick = () => {
+    setColor((current) => !current);
+  };
+
   const [motor, setMotor] = useState({
     brand: "nmax",
     color: "black",
@@ -30,11 +37,22 @@ const Bike = () => {
     });
   };
 
+  // const Increment = () => {
+  //   setCount((prev) => prev * 2);
+  // };
+
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: color ? "red" : "",
+        color: color ? "white" : "",
+      }}
+      onClick={handleClick}
+    >
       <h3 className={motor.color === "white" && "supra"}>
         it is {motor.brand} its color a {motor.color}
       </h3>
+      {/* <h1>{count}</h1> */}
       <button onClick={changeModel}> Click </button>
     </div>
   );
