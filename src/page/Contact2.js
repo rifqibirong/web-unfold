@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Contact.css";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 // const Contact = () => {
 //   const [name, setName] = useState("dama");
@@ -18,8 +19,12 @@ import "./Contact.css";
 // };
 
 const Bike = () => {
-  // const [count, setCount] = useState(0);
   const [color, setColor] = useState(true);
+  const [isDarkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = (checked) => {
+    setDarkMode(checked);
+  };
 
   const handleClick = () => {
     setColor((current) => !current);
@@ -37,23 +42,50 @@ const Bike = () => {
     });
   };
 
-  // const Increment = () => {
-  //   setCount((prev) => prev * 2);
-  // };
+  const defaultProperties = {
+    dark: {
+      circle: {
+        r: 9,
+      },
+      mask: {
+        cx: "50%",
+        cy: "23%",
+      },
+      svg: {
+        transform: "rotate(40deg)",
+      },
+      lines: {
+        opacity: 0,
+      },
+    },
+    light: {
+      circle: {
+        r: 5,
+      },
+      mask: {
+        cx: "100%",
+        cy: "0%",
+      },
+      svg: {
+        transform: "rotate(90deg)",
+      },
+      lines: {
+        opacity: 1,
+      },
+    },
+    springConfig: { mass: 4, tension: 250, friction: 35 },
+  };
 
   return (
-    <div
-      style={{
-        backgroundColor: color ? "red" : "",
-        color: color ? "white" : "",
-      }}
-      onClick={handleClick}
-    >
-      <h3 className={motor.color === "white" && "supra"}>
-        it is {motor.brand} its color a {motor.color}
-      </h3>
-      {/* <h1>{count}</h1> */}
-      <button onClick={changeModel}> Click </button>
+    <div>
+      <DarkModeSwitch
+        animationProperties={defaultProperties}
+        style={{ marginBottom: "2rem" }}
+        checked={isDarkMode}
+        moonColor="red"
+        onChange={toggleDarkMode}
+        size={120}
+      />
     </div>
   );
 };
