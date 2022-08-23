@@ -1,93 +1,21 @@
-import { useState } from "react";
-import "./Contact.css";
-import { DarkModeSwitch } from "react-toggle-dark-mode";
+import React from "react";
+import DarkmodeToggle from "../components/ToggleDarkMode";
+import { makeStyles } from "@material-ui/styles";
 
-// const Contact = () => {
-//   const [name, setName] = useState("dama");
+const useStyle = makeStyles((theme) => ({
+  text: {
+    color: localStorage.getItem("theme") === "dark" ? "red" : "green",
+  },
+}));
 
-//   const changeName = () => {
-//     setName("rifqi");
-//   };
-
-//   return (
-//     <div style={{ color: "white" }}>
-//       <button onClick={() => changeName()}>Test Invoke</button>
-//       <div>Contact</div>
-//       <div style={{ backgroundColor: "red" }}>{name}</div>
-//     </div>
-//   );
-// };
-
-const Bike = () => {
-  const [color, setColor] = useState(true);
-  const [isDarkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = (checked) => {
-    setDarkMode(checked);
-  };
-
-  const handleClick = () => {
-    setColor((current) => !current);
-  };
-
-  const [motor, setMotor] = useState({
-    brand: "nmax",
-    color: "black",
-  });
-
-  const changeModel = () => {
-    setMotor({
-      brand: "supra",
-      color: "white",
-    });
-  };
-
-  const defaultProperties = {
-    dark: {
-      circle: {
-        r: 9,
-      },
-      mask: {
-        cx: "50%",
-        cy: "23%",
-      },
-      svg: {
-        transform: "rotate(40deg)",
-      },
-      lines: {
-        opacity: 0,
-      },
-    },
-    light: {
-      circle: {
-        r: 5,
-      },
-      mask: {
-        cx: "100%",
-        cy: "0%",
-      },
-      svg: {
-        transform: "rotate(90deg)",
-      },
-      lines: {
-        opacity: 1,
-      },
-    },
-    springConfig: { mass: 4, tension: 250, friction: 35 },
-  };
-
+const Contact2 = () => {
+  const classes = useStyle();
   return (
     <div>
-      <DarkModeSwitch
-        animationProperties={defaultProperties}
-        style={{ marginBottom: "2rem" }}
-        checked={isDarkMode}
-        moonColor="red"
-        onChange={toggleDarkMode}
-        size={120}
-      />
+      <DarkmodeToggle />
+      <h2 className={classes.text}>Contact2</h2>
     </div>
   );
 };
 
-export default Bike;
+export default Contact2;
