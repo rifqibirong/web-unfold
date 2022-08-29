@@ -4,7 +4,7 @@ import { FormControlLabel, Switch } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
-  width: 65,
+  width: 60,
   height: 34,
   padding: 7,
   "& .MuiSwitch-switchBase": {
@@ -75,20 +75,19 @@ const myTheme = createTheme({
 const DarkmodeToggle = () => {
   const [tema, setTema] = useState(false);
 
+  let getThemes = localStorage.getItem("theme");
   useEffect(() => {
-    let getThemes = localStorage.getItem("theme");
     if (getThemes === undefined) {
       localStorage.setItem("theme", "light");
     }
     localStorage.setItem("theme", tema ? "dark" : "light");
   }, []);
 
-  //   useEffect(() => (
-  //     let getThemes = localStorage.getItem("theme")
-  //     if(getThemes === undefined) {
-  //         localStorage.setItem("theme", "light")
-  //     }
-  //   ))
+  useEffect(() => {
+    if (getThemes === undefined) {
+      localStorage.setItem("theme", "light");
+    }
+  }, []);
 
   const handleCheck = () => {
     setTema(!tema);
@@ -97,22 +96,21 @@ const DarkmodeToggle = () => {
     } else {
       localStorage.setItem("theme", "dark");
     }
+    console.log(tema, "< state tema");
   };
   return (
-    <ThemeProvider theme={myTheme}>
-      <div>
-        <FormControlLabel
-          control={
-            <MaterialUISwitch
-              checked={tema}
-              onChange={handleCheck}
-              sx={{ m: 1 }}
-            />
-          }
-          label=""
-        />
-      </div>
-    </ThemeProvider>
+    <div>
+      <FormControlLabel
+        control={
+          <MaterialUISwitch
+            checked={tema}
+            onChange={handleCheck}
+            sx={{ m: 1 }}
+          />
+        }
+        label=""
+      />
+    </div>
   );
 };
 
