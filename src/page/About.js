@@ -6,6 +6,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { BsLinkedin } from "react-icons/bs";
+import { AiFillHome } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function About() {
   const lazy = {
@@ -18,8 +20,13 @@ function About() {
   };
 
   return (
-    <div>
+    <>
       <div className="mainAbout">
+        <div className="wrapper-icon">
+          <Link className="link-home" to="/">
+            <AiFillHome className="rumah" />
+          </Link>
+        </div>
         <div className="ava">
           <Lottie options={lazy} />
         </div>
@@ -44,12 +51,11 @@ function About() {
           <div className="line2"></div>
         </div>
       </div>
-
       {/* ==== content */}
       <div className="text-section">
-        <p>Text</p>
+        <p>I'm Rifqi Ramadhansyach </p>
       </div>
-    </div>
+    </>
   );
 }
 
